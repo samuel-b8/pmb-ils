@@ -73,7 +73,7 @@ services:
 
   app:
     <<: [*default-settings-std, *defaults-ress-limit, *defaults-healthcheck]
-    image: ${PMB_TAG_NAME-pmb-ils}:${PMB_VERSION-7.5.1}
+    image: ${PMB_TAG_NAME-pmb-ils}:${PMB_VERSION-8.0.1}
     # user: 1000:1000
     # read_only: true
     build:
