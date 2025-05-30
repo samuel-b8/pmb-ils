@@ -50,9 +50,7 @@ x-defaults-healthcheck:
 
 services:
   db:
-    <<: *default-settings-std
-    <<: *defaults-ress-limit
-    <<: *defaults-healthcheck
+    <<: [*default-settings-std, *defaults-ress-limit, *defaults-healthcheck]
     image: mariadb:10.10-jammy
     # read_only: true
     user: 1000:1000
@@ -74,9 +72,7 @@ services:
        test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
 
   app:
-    <<: *default-settings-std
-    <<: *defaults-ress-limit
-    <<: *defaults-healthcheck
+    <<: [*default-settings-std, *defaults-ress-limit, *defaults-healthcheck]
     image: ${PMB_TAG_NAME-pmb-ils}:${PMB_VERSION-7.5.1}
     # user: 1000:1000
     # read_only: true
