@@ -20,7 +20,7 @@ cd pmb-ils
 procéder au build
 
 ```
-docker-compose build
+docker compose build
 ```
 
 recopier le fichier `.env.tmpl` afin de satisfaire à votre environnement
@@ -39,7 +39,7 @@ sudo mkdir -p ./data/mysql ; sudo chown -R 1000:1000 ./data/mysql
 lancer l'application
 
 ```
-docker-compose pull ; docker-compose up -d ; docker-compose logs -ft
+docker compose pull ; docker compose up -d ; docker compose logs -ft
 ```
 
 avec les paramètres par défaut, l'application peut être configurée avec cette URL
